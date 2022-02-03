@@ -1,0 +1,37 @@
+Mongo Shell Commands:
+
+1.show dbs(To list all the current databases available in the system)
+	admin   0.000GB
+	config  0.000GB
+	local   0.000GB
+
+2.use db_name(To get into the database)
+ 	use acme
+	switched to db acme
+
+3.show collections(To list all the  collections available in that particular database which we are in currently)
+
+4.use acme(It will create an acme database(Default database))
+	use acme
+	switched to db acme
+
+5.db.createCollection('GradeHistory') (It will create a collection name Grades).
+	 db.createCollection('GradeHistory')
+		{ "ok" : 1 }
+
+6.db.GradeHistory.insert(It will insert entity into collection)
+	db.GradeHistory.insert({
+	... Name:'Vikas',
+	... Result:'Fail'
+	... })
+	WriteResult({ "nInserted" : 1 }) 
+
+7.db.GradeHistory.insertMany(To insert two or more objects together)
+
+8.db.GradeHistory.update({Name:'Vikas'}, $set:{Result:'Pass'}) (Result will be updated to Pass)
+
+9.db.dropDatabase() (This function will delete the current database)
+
+10.db.GradeHistory.find({Name:'Hansraj'}) (It will retrieve all details of person whose name is Hansraj)
+
+11.db.GradeHistory.createIndex({Name:'Hansraj'}) (Creating Index)
