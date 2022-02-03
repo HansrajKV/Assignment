@@ -1,0 +1,17 @@
+{
+  "name": "nodecrudoperations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "testing.js",
+  "scripts": {
+    "start": "nodemon testing.js"
+  },
+  "author": "Hansraj",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
